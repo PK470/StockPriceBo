@@ -1,7 +1,6 @@
 # StockPriceBot
 A Telegram bot to fetch real-time stock prices using `pyTelegramBotAPI` and `BeautifulSoup`.
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 ![StockPriceBot in action](path/to/your/demo.gif)
 ![Bot Screenshot](path/to/your/screenshot.png)
 ## Table of Contents
@@ -9,7 +8,6 @@ A Telegram bot to fetch real-time stock prices using `pyTelegramBotAPI` and `Bea
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
-- [License](#license)
 ## Installation
 1. Clone the repository:
    ```bash
