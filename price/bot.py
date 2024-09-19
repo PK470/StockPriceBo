@@ -15,7 +15,7 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "Send me a stock symbol, and I'll fetch the price for you.")
+    bot.reply_to(message, "Send me a stock symbol followed by /price, and I'll fetch the price for you.")
 
 
 @bot.message_handler(commands=['help'])
@@ -39,5 +39,9 @@ def get_stock_price(message):
     except Exception as e:
         bot.reply_to(message, f"Sorry, I couldn't find that {stock_symbol}. Please check the spelling or try another symbol.")
 
+@bot.message_handler(func=lambda message: True)  
+def handle_unknown_command(message):
+    bot.reply_to(message, f"Unknown command: {message.text}")
+    send_help(message)
 
 bot.polling()
